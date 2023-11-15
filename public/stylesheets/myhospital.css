@@ -1,0 +1,491 @@
+:root {
+    --pri: #000000;
+    --sec: #ffffff;
+    --grey: #232323;
+    --drey: #181818;
+    --blue: #0085FF;
+    --lightblue:#D9F5FD;
+    --green:#14BB7F;
+    --lightgreen:#F1FFF5;
+    --blueborder:#036FCE;
+    --greenborder:#6CD68A;
+    --yellow:#D96B15;
+    --lightyellow:#FDF8C6;
+    --yellowborder:#DE9A63;
+    --pay:#069adf;
+    --cancel:#db3c0c;
+}
+
+/* @font-face {
+    src: url("/fonts/bandeins.ttf");
+    font-family: "bandeins";
+}
+
+@font-face {
+    src: url("/fonts/Quickfox.ttf");
+    font-family: "Quickfox";
+}
+
+@font-face {
+    src: url("/fonts/VanillaDreamers-9Y7pK.otf");
+    font-family: "Vanilla Dreamers";
+}
+
+@font-face {
+    src: url("/fonts/Shaloems.ttf");
+    font-family: "Shaloems";
+}
+
+@font-face {
+    src: url("/fonts/PaytoneOne-Regular.ttf");
+    font-family: "Paytone One";
+}
+
+@font-face {
+    src: url("/fonts/Gilroy-Semibold.otf");
+    font-family: "Gilroy";
+    font-weight: 600;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Medium.woff2");
+    font-family: "Gilroy";
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url("Gilroy-Medium.eot"); 
+    src: url("Gilroy-Medium.ttf") format("truetype"),
+    url("Gilroy-Medium.otf") format("opentype"), 
+    url("Gilroy-Medium.woff") format("woff"),
+    url("Gilroy-Medium.woff2") format("woff2"),
+ 
+}
+@font-face {
+src: url("/fonts/Gilroy-bold.otf");
+    font-family: "Gilroy";
+
+}
+@font-face {
+    src: url("/fonts/Gilroy-Medium.otf");
+    font-family: "Gilroy";
+}
+
+@font-face {
+    src: url("/fonts/Gilroy-Heavy.otf");
+    font-family: "Gilroy";
+    font-weight: 900;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Black.otf");
+    font-family: "Gilroy";
+    font-weight: 800;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Extrabold.otf");
+    font-family: "Gilroy";
+    font-weight: 700;
+}
+@font-face {
+    src: url("/fonts/Gilroy-bold.otf");
+    font-family: "Gilroy";
+    font-weight: 600;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Semibold.otf");
+    font-family: "Gilroy";
+    font-weight: 500;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Medium.otf");
+    font-family: "Gilroy";
+    font-weight: 400;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Regular.otf");
+    font-family: "Gilroy";
+    font-weight: 300;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Light.otf");
+    font-family: "Gilroy";
+    font-weight: 200;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Ultralight.otf");
+    font-family: "Gilroy";
+    font-weight: 100;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Heavy.woff2");
+    font-family: "Gilroy";
+    font-weight: 900;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Black.woff2");
+    font-family: "Gilroy";
+    font-weight: 800;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Extrabold.woff2");
+    font-family: "Gilroy";
+    font-weight: 700;
+}
+@font-face {
+    src: url("/fonts/Gilroy-bold.woff2");
+    font-family: "Gilroy";
+    font-weight: 600;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Semibold.woff2");
+    font-family: "Gilroy";
+    font-weight: 500;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Medium.woff2");
+    font-family: "Gilroy";
+    font-weight: 400;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Regular.woff2");
+    font-family: "Gilroy";
+    font-weight: 300;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Light.woff2");
+    font-family: "Gilroy";
+    font-weight: 200;
+}
+@font-face {
+    src: url("/fonts/Gilroy-Ultralight.woff2");
+    font-family: "Gilroy";
+    font-weight: 100;
+}
+@font-face {
+    src: url("Gilroy-Heavy.ttf");
+    font-family: "Gilroy";
+    font-weight: 900;
+}
+@font-face {
+    src: url("Gilroy-Black.ttf");
+    font-family: "Gilroy";
+    font-weight: 800;
+}
+@font-face {
+    src: url("Gilroy-Extrabold.ttf");
+    font-family: "Gilroy";
+    font-weight: 700;
+}
+@font-face {
+    src: url("Gilroy-bold.ttf");
+    font-family: "Gilroy";
+    font-weight: 600;
+}
+@font-face {
+    src: url("Gilroy-Semibold.ttf");
+    font-family: "Gilroy";
+    font-weight: 500;
+}
+@font-face {
+    src: url("Gilroy-Medium.ttf");
+    font-family: "Gilroy";
+    font-weight: 400;
+}
+@font-face {
+    src: url("Gilroy-Regular.ttf");
+    font-family: "Gilroy";
+    font-weight: 300;
+}
+@font-face {
+    src: url("Gilroy-Light.ttf");
+    font-family: "Gilroy";
+    font-weight: 200;
+}
+@font-face {
+    src: url("Gilroy-Ultralight.ttf");
+    font-family: "Gilroy";
+    font-weight: 100;
+} */
+
+h1 {
+    font-family: "Gilroy";
+}
+
+h2 {
+    font-family: "Gilroy";
+}
+
+h3 {
+    font-family: "Gilroy";
+}
+
+h4 {
+    font-family: "Gilroy";
+}
+
+h5 {
+    font-family: "Gilroy";
+}
+
+h6 {
+    font-family: "Gilroy";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color:var(--pri);;
+}
+
+
+#nav-main h4{
+    color: var(--sec);
+}
+body {
+    overflow-y: scroll;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#footer{
+    background-color: #1c1c1c !important;
+    position: relative;
+    z-index: 99;
+}
+/* .footer .ftop h1 {
+    margin-top:15vh;
+} */
+#main{
+    transform: translateY(98px);
+    min-height: 100%;
+    width: 100%;
+    padding: 0vw 4.5vw 0vw 4.6vw;
+    padding-top:5vh;
+    color: white;
+    /* background-color: blue; */
+    background-color: #000000 !important;
+    /* background-color: #ececec; */
+    /* background-color: #fff; */
+}
+#main h1{
+    font-size: 1.9vw;
+    letter-spacing: 1px;
+    margin-bottom: 6vh;
+    /* color: #111; */
+    /* background-color: red; */
+}
+#courses{
+    gap: 1.7vw;
+    margin-top: 3.8vh;
+    display: flex;
+    padding-bottom: 4vw;
+    flex-wrap: wrap;
+    
+    /* #f5f2e8 */
+}
+#singleCourse{
+    border-radius: 8px;
+    padding: 1.3vw 1.1vw;
+    width: 19vw;
+    /* height: fit-content; */
+    /* background-color: grey; */
+    background-color: var(--drey);
+    /* background-color: #ececec; */
+    /* color: #000; */
+}
+a{
+    text-decoration: none;
+    color: var(--yellow);
+}
+#singleCourse #image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#singleCourse #image:hover{
+    transform: scale(1.02);
+}
+#singleCourse #image{
+    transition: 0.4s;
+    height: 9vw;
+    margin: auto;
+    overflow: hidden;
+    width: 100%;
+    background-color: rgba(255, 192, 203, 0.26);
+    border-radius: 8px;
+    margin-bottom: 1.2vw;
+    cursor: pointer;
+}
+#singleCourse #courseName{
+    cursor: pointer;
+    color: var(--sec);
+    font-weight: 500;
+    line-height: 1.7vw;
+    /* background-color: red; */
+    height: 2.2vw;
+    font-size: 1.35vw;
+}
+#singleCourse #courseName::-webkit-scrollbar{
+    display: none;
+}
+
+
+#singlecourse h6{
+    margin-bottom: 10px;
+    background-color: yellow !important;
+}
+#singleCourse > p{
+    margin-top: 1.1vw;
+    font-size: 1.1vw;
+}
+#button{
+    margin-top: 1vw;
+    padding-top: 1vw;
+    border-top: 1.8px dashed #555555b6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+    flex-wrap: wrap;
+}
+#button div{
+    display: flex;
+    border-radius: 50px;
+    align-items: center;
+    width: fit-content;
+    color: var(--sec);
+}
+#recording:hover,#fees:hover,#pay:hover,#cancel:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+#recording{
+    padding: 6px 1vw;
+    background-color: var(--blue);
+    transition: 0.2s;
+}
+#fees{
+    transition: 0.2s;
+    padding: 8px 1vw;
+    background-color: var(--green);
+}
+#fees i{
+    margin-left: 5px;
+    font-size: 0.9vw;
+}
+#recording i{
+    font-size: 1.15vw;
+    margin-right: 0.3vw;
+}
+#fees p,#recording p{
+    font-size: 0.85vw;
+    font-weight: 500;
+}
+#cancel{
+    padding: 9px 1vw;
+    background-color: var(--cancel);
+    transition: 0.2s;
+}
+#pay{
+    transition: 0.2s;
+    padding: 9px 1vw;
+    background-color: var(--pay);
+}
+#pay i{
+    margin-left: 5px;
+    font-size: 0.9vw;
+}
+
+#cancel i{
+    font-size: 1vw;
+    margin-right: 10px;
+}
+#pay p,#cancel p{
+    font-size: 0.85vw;
+    font-weight: 500;
+}
+#footteerr{
+    transform: translateY(120px);
+}
+#courses{
+    /* padding-bottom: 50px; */
+}
+.try-for-free{
+    margin-top: 1vw;
+    /* color: var(); */
+    background-color: var(--green) !important;
+}
+#notEnrollYet{
+    text-align: center;
+    color: rgb(114, 114, 114);
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 80vw;
+}
+#notEnrollYet button{
+    background-color: #ff9900;
+    border: none;
+    outline: none;
+    border-radius: 11px;
+    padding: 15px  30px;
+    margin-top: 10px;
+    color: rgb(229, 229, 229);
+    cursor: pointer;
+    font-family: Gilroy;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+#notEnrollYet button a{
+    color: rgb(229, 229, 229);
+}
+
+#search{
+    margin-bottom: 0vmax !important;
+}
+#popup_box a:hover {
+    box-shadow: 5px 5px 0px #000000ef;
+    color: white;
+  }
+
+@media (max-width:767px) {
+    #courses{
+        flex-direction: column;
+        align-items: center;
+    }
+    #main h1{
+        font-size: 7vw;
+    }
+    #singleCourse{
+        width:90vw !important;
+        padding: 2vmax;
+    }
+    #singleCourse #courseName{
+        font-size: 8vw;
+        margin-top: 3vmax;
+    }
+    #button{
+       margin-top: 6vh;
+       padding-top: 3vh;
+       justify-content: flex-start;
+       gap: 2vmax;
+       padding-bottom: 2vh;
+    }
+    #button p{
+        font-size: 2vmax;
+    }
+    #button div{
+        padding: 1.5vmax 2.5vmax;
+    }
+}

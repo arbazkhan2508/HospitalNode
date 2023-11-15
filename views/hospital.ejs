@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/hospital.css">
+    <link rel="stylesheet" href="../stylesheets/nav.css">
+</head>
+<body>
+    <style>
+         #mf{
+            display: none;
+         }
+    </style>
+    <form id="mf" action="/uploadHphotu/<%= hospital._id %>" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Multiple
+                files input example</label>
+            <input id="pfile" name="Hospitalname" class="form-control" type="file" id="formFileMultiple" multiple>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Submit">
+    
+        </form>
+    <% include ./partials/nav.ejs %>
+    <div id="main">
+        <div id="center">
+            <div class="left">
+                <div class="hospital_pofile">
+                     
+                     <%  if(hospital.Himg){ %>
+                        <img src="../images/uploads/hospitalpr/<%= hospital.Himg %>" alt="">
+                      <% } else{ %>
+                        <%= user.name.charAt(0) %>
+                      <% }%>
+                     
+                     <div id="user-profile-edit-btn">
+                        
+                       <button><i class="ri-pencil-fill"></i></button>
+                    </div>
+                </div>
+                <div class="text">
+                      <div class="tp">
+                        <h6> <%= hospital.HospitalName %></h6>
+                        <h6> <%= hospital.HEmail %></h6>
+                        <h6> <%= hospital.Address %></h6>
+
+                        <h6>Stablish in : <%= hospital.YOM.getFullYear(); %></h6>
+                        <a href=""><h6 style="margin: initial !important;"><%= hospital.Hurl %></h6></a>
+                        
+                      </div>
+                      <div style="mask-type: 1vmax;" id="button">
+                        <div onclick="window.location.href='/editHospital/<%= hospital._id %>'" id="fees">
+                            <p>Edit Hospital</p>
+                            <i class="ri-checkbox-circle-fill"></i>
+                        </div>
+                        
+                        <div onclick="window.location.href='/delete/Hospital/<%= hospital._id %>'" id="pay">
+                             <p>Delete Hospital</p>
+                        </div>
+        </div>
+                </div>
+            </div>
+            <div class="right">
+                 <h1>Welcome, <span><%= hospital.HospitalName %>.</span></h1>
+                 <h3>Hospital Details.</h3>
+                 <div class="details">
+                     <p><%= hospital.Des %></p>
+                      <div class="name">
+                            <div class="nl">
+                                <div class="n">
+                                    <h6> Hospital gstin Number : </h6>
+                                    <h6> Hospital Pin Code : </h6>
+                                    <h6> Hospital Contect Number : </h6>
+                                    <h6> Hospital Working Hours : </h6>
+                                    <h6>  Beds  : </h6>
+                                    <h6>  Operation Theater  : </h6>
+                                    <h6>  Intensive Care Unit.  : </h6>
+    
+                                </div>
+                                <div class="n1">
+                                    <h6>&nbsp;<%= hospital.gstin %></h6>
+                                    <h6> &nbsp;<%= hospital.PinCode %></h6>
+                                    <h6> &nbsp;<%= hospital.ContectNumber %></h6>
+                                    <h6> &nbsp;<%= hospital.Timing %></h6>
+                                    <h6> &nbsp;<%= hospital.Beds %></h6>
+                                    <h6> &nbsp;<%= hospital.OT %></h6>
+                                    <h6> &nbsp;<%= hospital.ICU %></h6>
+                                  
+                                </div>
+                            </div>
+                            <div class="nl">
+                                <div class="n">
+                                   
+                                     
+                                       <h6> Emergency Room : </h6>
+                                    <h6> Labouratry  : </h6>
+                                    <h6> Outpatient Department : </h6>
+                                <h6> Ambulance : </h6>
+                                <h6> Diagnostic Imaging : </h6>
+                                <h6> Pharmacy : </h6>
+                                <h6> Canteen : </h6>
+    
+                                </div>
+                                <div class="n1">
+                                   
+                                    
+                                  
+                                    <h6>
+                                        &nbsp;
+                                         <%= hospital.ER %>
+                                    </h6>
+                                <h6> &nbsp;<%= hospital.LAB %></h6>
+                                <h6> &nbsp;<%= hospital.OPD %></h6>
+                                <h6>
+                                    &nbsp;
+                                     <% if(hospital.Ambulance === true){ %>
+                                           Available
+                                     <% }else{ %>
+                                        Not Available
+                                     <% } %>
+                                </h6>
+                                <h6>
+                                    &nbsp;
+                                     <% if(hospital.DI === true){ %>
+                                           Available
+                                     <% }else{ %>
+                                        Not Available
+                                     <% } %>
+                                </h6>
+                                <h6>
+                                    &nbsp;
+                                     <% if(hospital.Medical === true){ %>
+                                           Available
+                                     <% }else{ %>
+                                        Not Available
+                                     <% } %>
+                                </h6>
+                                <h6>
+                                    &nbsp;
+                                     <% if(hospital.Canteen === true){ %>
+                                           Available
+                                     <% }else{ %>
+                                        Not Available
+                                     <% } %>
+                                </h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                      </div>
+                 </div>
+            </div>
+        </div>
+         
+    </div>
+    <script>
+         document.querySelector("#user-profile-edit-btn button")
+        .addEventListener("click",function(){
+          document.querySelector("#pfile").click();
+
+        })
+        document.querySelector("#pfile").addEventListener("change",function(){
+           document.querySelector("#mf").submit();
+        })
+
+    </script>
+</body>
+</html>

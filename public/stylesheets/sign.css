@@ -1,0 +1,321 @@
+
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+  }
+  
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+
+  #main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://img.freepik.com/premium-photo/businessman-hold-virtual-plus-medical-network-connection-icons-covid-19-pandemic-develop-people-awareness-spread-attention-their-healthcare-doctor-document-medicine-ambulance-patient-icon_150455-11957.jpg?size=626&ext=jpg&uid=R107214502&ga=GA1.1.683316832.1687191915&semt=ais");
+    background-size: cover;
+  }
+  
+  
+ 
+  #left-panel {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  #left-panel #nav {
+    position: absolute;
+    display: flex;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 99;
+    align-items: center;
+    padding: 0 40px;
+    width: 100%;
+    top: 0;
+  }
+  
+  #nav img {
+    height: 15vh;
+  }
+  
+  #nav i {
+    font-size: 1.8vw;
+    font-weight: 700;
+    color: rgb(33, 155, 255);
+    cursor: pointer;
+  }
+  #main_nav{
+    background-color: #fff;
+  }
+  #right-panel {
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+    z-index: 99999;
+  }
+  
+  #right-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  #right-panel-img {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    /* background-image: url("https://wallpaperaccess.com/full/124130.jpg");  */
+    /* background-image: url("https://img.freepik.com/premium-photo/businessman-hold-virtual-plus-medical-network-connection-icons-covid-19-pandemic-develop-people-awareness-spread-attention-their-healthcare-doctor-document-medicine-ambulance-patient-icon_150455-11957.jpg?size=626&ext=jpg&uid=R107214502&ga=GA1.1.683316832.1687191915&semt=ais"); */
+  
+  }
+  
+  #sign-in-page {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 9;
+    padding-top: 10vh;
+    /* background-color: red; */
+  }
+  
+  #sign-in-page form {
+    position: relative;
+    width: 22.4vw;
+    /* background-color: blue; */
+  }
+  
+  #sign-in-page p {
+    font-size: 1.1vw;
+    margin-bottom: 0.5vh;
+    font-weight: 500;
+  }
+  
+  #sign-in-page h1 {
+    font-size: 2.5vw;
+    margin-bottom: 3vh;
+    font-weight: 650;
+    color: #fff;
+  }
+  
+  #sign-in-page a {
+    text-decoration: none;
+    color: #111;
+    font-size: 1.1vw;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 2.6vh;
+  }
+  #sign-in-page a:hover{
+    text-decoration: underline;
+  }
+  
+  #create_ac:hover {
+    text-decoration: underline;
+  }
+  
+  form input {
+    /* padding: 1vh 1vw; */
+    padding-left: .2vh;
+    width: 100%;
+    background-color: white;
+    background-color: transparent;
+    border: none;
+    color: #fff ;
+    border-bottom: 3px solid rgb(24, 227, 254);
+    border-bottom: 3px solid #fff;
+  }
+  
+  form input:focus {
+    outline: none;
+  }
+  
+  #land-form button {
+    width: 100%;
+    padding: 1.6vh 0;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    background: linear-gradient(to right, rgb(104, 41, 198) -15%, rgb(54, 121, 228), rgb(83, 141, 234));
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.2vw;
+    margin-top: 4vh;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+  }
+  
+  #land-form button:active {
+    transform: scale(0.95);
+  }
+  
+  form h5 {
+    text-align: left;
+    margin-top: 1.8vh;
+    font-weight: 600;
+    font-size: 1vw;
+    color: #767676;
+    color: #fff;
+  }
+  
+  #gitgoog {
+    margin-top: -1.2vh;
+    display: flex;
+    padding: 1vh 2vw;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #google_link {
+    background: linear-gradient(rgb(255, 85, 67), rgb(214, 16, 16));
+    padding: 1.4vh 1.3vw;
+    color: white !important;
+    border-radius: 5px;
+    font-size: 1.1vw !important;
+    /* margin-right: 2vw; */
+    display: flex;
+    align-items: center;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+    background-color: olive;
+  }
+  
+  #google_link i {
+    font-weight: 100;
+    font-size: 1.3vw;
+    margin-right: 1.5vw;
+  }
+  
+  #google_link:active {
+    transform: scale(0.95);
+  }
+  
+ 
+  #main2 {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    z-index: 100;
+    overflow: hidden;
+    display: none;
+  }
+  
+  
+  
+  
+  
+  @media (max-width:767px){
+    #right-panel {
+      display: none;
+    }
+    
+    #left-panel {
+      width: 100%;
+    }
+    #nav i {
+      font-size: 9vw;
+    }
+    #nav{
+      padding: 0 20px !important;
+      padding-top: 20px !important;
+    }
+    #nav h6{
+      font-size: 6vw;
+    }
+    #sign-in-page form{
+      width: 80vw;
+    }
+    #sign-in-page h1{
+      font-size: 7vw;
+    }
+    form h5 {
+      font-size: 5vw;
+    }
+    form input{
+      font-size:6vw;
+    }
+    #land-form button{
+      font-size: 5vw;
+      letter-spacing: 2px;
+    }
+    #sign-in-page a{
+      font-size: 5vw;
+    }
+    #google_link{
+      font-size: 4vw !important;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+    #google_link i{
+      font-size: 6vw;
+    }
+    .mt-3{
+      margin-top: 1vmax;
+    }
+    #main{
+      overflow: hidden !important;
+    }
+    body{
+      overflow: hidden;
+    }
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

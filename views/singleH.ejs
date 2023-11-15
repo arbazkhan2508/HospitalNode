@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= hospital.vehicleName %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/nav.css">
+    
+    <link rel="stylesheet" href="../stylesheets/footer.css">
+    <link rel="stylesheet" href="../stylesheets/singleH.css">
+    <link rel="stylesheet" href="../stylesheets/search.css">
+    <link rel="stylesheet" href="../stylesheets/loco.css">
+</head>
+<style>
+   p{
+    white-space: nowrap;
+   }
+ 
+   .footer{
+    position: fixed !important;
+    z-index: 9999 !important;
+   }
+  
+   .footer .ftop{
+    display: flex;
+    align-items: center !important;
+    height: 15vh;
+      justify-content: center;
+  }
+  .right_nav .search h6 {
+    color: #ffff;
+  }
+  .div .img img{
+    height: 80%;
+    object-fit: scale-down !important;
+  }
+</style>
+<body>
+    <% include ./partials/nav.ejs %>
+    <% include ./partials/search.ejs %>
+    
+    <div id="main">
+          <div class="pg1" >
+               <div class="photos">
+                  <div class="left">
+                    <img src="../images/uploads/hospitalimages/<%= hospital.pic[0] %>" alt="">
+                  </div>
+                  <div class="right">
+                      <div class="one"> 
+                          <img src="../images/uploads/hospitalimages/<%= hospital.pic[1] %>" alt="">
+                      </div>
+                      <div class="one">
+                        <img src="../images/uploads/hospitalimages/<%= hospital.pic[2] %>" alt="">
+                      </div>
+                      <div class="one">
+                        <div class="overlayOne">
+                          <small>more photos</small>
+                        </div>
+                        <img src="../images/uploads/hospitalimages/<%= hospital.pic[3] %>" alt="">
+                    </div>
+                  </div>
+               </div>
+                <div class="btm">
+                        <h1><%= hospital.HospitalName %></h1>
+                        <h3>
+                         <%= hospital.Address %>  
+                        
+                        </h3>
+                  <a href="<%= hospital.Hurl %>">
+
+                    <div class="button">
+                        <i class="ri-mail-fill"></i>
+                        <h6 style="font-weight: 500; letter-spacing: 1px;">Visit Now</h6>
+                    </div>
+                   </a>
+
+                </div>
+          </div>
+          <div class="pg2">
+              <div class="divs">
+                  <div class="div">
+                    <div class="img">
+                        <i class="ri-hotel-bed-fill"></i>
+                    </div>
+                    <div class="f">
+                        <h6>Beds Capacity</h6>
+                        <p> <%= hospital.Beds %> Beds are Available.</p>
+                    </div>
+                  </div>
+                  <div class="div">
+                    <div class="img">
+                       <img src="data:image/png;base64,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" alt="">
+                    </div>
+                    <div class="f">
+                        <h6>Intensive care unit</h6>
+                        <p> <%= hospital.ICU %> ICU's are Available.</p>
+                    </div>
+                  </div>
+                  <div class="div">
+                     <div class="img">
+                         <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/emergency-room-4567420-3784404.png?f=webp" alt="">
+                     </div>
+                    <div class="f">
+                        <h6>Emergency Rooms</h6>
+                        <p> <%= hospital.ER %> are Available.</p>
+                    </div>
+                  </div>
+              </div>
+              <div id="ak" class="divs">
+                <div class="div" style="margin-bottom: 5vh;">
+                   <h4>Whats this hospital offers </h4>
+                </div>
+                <div class="div" style="display: flex; align-items: center;gap: 150px;">
+                  <div class="icons">
+                      <div class="img">
+                         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEX///8UFBQAAAAMDAwRERE2NjadnZ309PTh4eHm5ubq6uqRkZGHh4fZ2dn39/cJCQlQUFBHR0e+vr6oqKgpKSnJycnR0dFVVVVwcHBqamp+fn4eHh60tLTU1NRDQ0N6enolJSUbGxtbW1s5OTmZmZm3t7dhYWEuLi6jo6NG40Q8AAAHpUlEQVR4nO2d6XrqIBCGDUHjHre416X1WO//Ck8g0QAhsZVBaJ55/7SNmuETAsMM0FYLQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRCkASyvmw/XZbDKB0kZuS6FTbYkCMjQdSlssmYKt65LYRNU+PdBhX8fVeHYXVEA6c/6j9/5aDG4/zU+7g5LJ2UCZZaO8Q9NIzbid/M/koCEhESOygXHOUyrrX33Y0bH7V3gmtAgfWnmqmBQRFxHXFRjTkLSBssUdrUf+0usciVtqTl2SciuhiXlf5Dok9eiMkhcuG6yS1wVC5Q9b5Bkkv46W3231yN+jVXg0XXRoOivCKWk02pdCQnT7vOWXpsScm5GBWbsY9ZIr9kjSck+vZTMmjHci+wzgUxi//m7/yIhzRUGzXkAJWb3KmSV2LwWmnIsFDbAk9Gxo4LCJsZqxkIVBvHEdXEs0BUV0p3r4lhgJCkkrouTupOzWweS21BUGMS328ztzHBIwAkk2JWtuzEjahMaWIeSnTPfpk2elw8CcnZUi8M3CUwlrp0I7L+jid4lOglizN9WhWJo8Z1c36jQjXPzFb5PYfjtQmH7dwrrx71nChcuetPfKSTzmcTvnmK6cCDwtwp78qf7zVOo9Pc9VIgKG6cwGlfTBIXpBKMGW/nwtyqsVz9vuEJrcVV/FNpyzD1SaCnD4ZFCSxkOnxQGVtZq+qXws+kKA2IhU+yXwvir6QoDnhNvtMLw3HSFAVvF0QCFZQ9ceAnad3OhkMTbocy6iEuDZ4wdKIwP5WJ0BYnAvpsDhdqVC4PHncjGoUJaVvhC1kPrm41pUYmwW4kqFern4yWFOp6o1nuft6ISYYP/VQrDQ1+H+nHde6Jp/ILC1u5REljfrUphPH39npOXFD5WwgVh+3XbZfxR2PouKhHSd/NIYfKoRBq/bryERwpbxfMLGbLxSeGyqETAnRk+KRQS0oDxYa8UCsvh1Dze63ilkG8Gy990fd2+jF8KhbUvBGobmF8KhfVLJgWQ8ExhJFQi0OJpzxTmO4gYUGtTfFPYEioRJt3mncK5MOyDhGy8UyjOokBCNjYUrowUCptRQEI2VQrp90DDUDEZ6d50+a6f5D/LMB0KBxxiRao3UYyCRKhEgBWpLmJtz7KEq8J3A0i3+ajwQ6hE85CNjwpbm8J3M0+3ealQuK15yMZLhfzAiYzw1EyFkVCJpuk2PxUKToNxyMaXzIxCETs19t08ya4pSOvHDX03JxlSomZIFSbSbQ1DNp5kuWUUz91sqZRvKxV0mO210SukDM11Wwqr7N3NmvhuZYW8CYXZD3WiZ0Nhbi/Q2csxSrepCgk5b/91++N01O0mnSkh0uvwClMD2/2I2+stOyvF3uNdBiEbWSEhR/mpjuYL0Sa0QkLWctJ+vG/rNFKD/aeiwphsNf7D7FQ9IzVTGJKjzt635qYG6TZBITnk5R/Nh5vP67GT5PaHj1k7qMLHoWDd+YDbu5/1NihXo8GTWCjME1rd7akYmFb/+LUkjuEV5kGY7nBR2Jtkc6VloN4XQmHmw/eu4rOednMLbrO3i6EVZu2uv5bsxWTH+5T+QrkxgMJM4K20ZzIkE9ZW++cQVmEmcK6xN2VtNdrJA4e5wsyBv+rCZISvUcoWnoEpzJblr/X22Piu7DE3VpgtQzroy0u5SR6oVd386EWFWfhlVWWPPf2J9KKpwmwvx6SquJS7viw/S9sKr23mpzyHvam2x77SrfiyqUJ+qFrN4QrhLspTe6HCSwKzh/BSY4/N68dn4eszUMjWsPBoz0ddg+M9e02RfgcNxuwImzpXe9WSp8EGCvkxqqwKv2rTKSyrPoY6YIJc2Fdb+33xdipUooFC9kCzPN2svoL4FO0IU4n8qU+e2GNdUbGq1mh20Y75olw550dLMxnW2SxhFMasCX5K99LYW0rLa0wUJoR1zvLARujxMpxK3iEfMHcgzZRNheRhhsTry3Ai22MD5ulxxWiG2GFdtxzcyuJ3S9Gv4L3RJ0glsubwT7KXnbD0Ibpq3F6xgMhsySnrZ8Sx6RFl7sfiuXJ91ptSANhjLw52j5lRtBOnoj3mRD4+Y7zOrci7iuHMvViOJftbHQ9/QxzH7AdhnYjw2IfFLn2xu2Nx4+RuL96YLloYn4raErM9okXmSkUgtKQnWkxMLJRi3D9hvigjEiJd4mYAcX4MuplcGFrFQJqwxoEP0nBUKfxqjMKftlIwfthKATkUlSWspFF7GjjEnqZYv6b2NJDoR4tQGS3g0I8WJ2W0gEQe8TOT8ogPe0TnP42HMRJHfHoCtVfy2sLtZTApe21wKF4bOV4Gq7LXBspPPG9IfuJ5w/Js9gS1JvnOk9kT7NanjCczYPCjAJ7MgC2cH107+YPe19n6SRQDnLpI1NnCIbk1YR9bJ9VXthsKvG81p/JQSmrjeAxObUTYAhUBWgrrIEpURPWt/ROjTXVU3xYdXWbG4gnH5UwQJQdgd02hexUXMdOYnOAPGxHpbRR7Z0tnmgmMjme+KiLLWNp7Iu50h7vC3nT/nhNOR/PhdfV5vMzedAI3y6q/0x6CIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIAiCIEgt/wEyIXxV07rY3wAAAABJRU5ErkJggg==" alt="">
+                      </div>
+                      <p>Ambulance</p>
+                  </div>
+                  <div class="icons">
+                      <div class="img">
+                          <img src="https://cdn-icons-png.flaticon.com/512/3079/3079285.png" alt="">
+                      </div>
+                      <p>Pharmacy</p>
+                  </div>
+                  <div class="icons">
+                      <div class="img">
+                          <img src="https://previews.123rf.com/images/greyjj/greyjj1503/greyjj150300033/37491748-mri-diagnostic-vector-icons.jpg" alt="">
+                      </div>
+                      <p>Diagnostic Imaging</p>
+                  </div>
+                  <div class="div">
+                    <i class="ri-store-3-line"></i>
+                      
+                    <div class="f">
+                        <h6>Canteen</h6>
+                    </div>
+                  </div>
+                </div>
+                
+                
+                
+              </div>
+               <div class="h1">
+                  <h1>Which you will Drive</h1>
+               </div>
+              <div class="divs" style="height: 70vh;border-radius: 15px;margin-top: 3vh;margin-bottom: 10vh;overflow: hidden;padding: initial;">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">  
+                        <% hospital.pic.forEach(function(pic){ %>
+                            <div class="swiper-slide"> 
+                                  <img src="../images/uploads/hospitalimages/<%= pic %>" alt="">
+                            </div>
+                       <% }) %>
+                       
+                        </div>
+                        <div class="swiper-button-next"></div>
+                       <div class="swiper-button-prev"></div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+              </div>
+              <div id="th" class="divs">
+                <div class="div" style="margin-bottom: 5vh;">
+                    <h4>Things to know </h4>
+                 </div>
+                 <div id="rules" class="div">
+                      <div class="first">
+                           <h3>Medical Information</h3>
+                           <div class="subtxt">
+                              <p style="font-family: gilroy !important;width: 20vw !important;white-space: inherit;">Be prepared to provide accurate and detailed information about your medical history, current medications, allergies, and any pre-existing conditions. This information is crucial for proper diagnosis and treatment.</p>
+                           </div>
+                      </div>
+                      <div class="first">
+                        <h3>Health Insurance Coverage</h3>
+                        <div class="subtxt">
+                             <p style="width: 20vw !important;white-space: inherit;font-family: gilroy !important;">Know your health insurance coverage details, including what services are covered and any potential out-of-pocket expenses. Check if the hospital is in-network for your insurance plan to avoid unexpected costs.</p>
+                        </div>
+                   </div>
+                   <div class="first">
+                    <h3>Cancellation policy</h3>
+                    <div class="subtxt">
+                         <h6>This reservation is refundable.</h6>
+                         <h6>Review the Host's full cancellation policy which applies</h6>
+                         <h6> 
+                            if YOU cancel for illness or disruptions caused by COVID-19.</h6>
+                    </div>
+               </div>
+                 </div>
+              </div>
+          </div>
+    <% include ./partials/footer.ejs %>
+
+          
+    </div>
+    <% include ./partials/loco.ejs %>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="../javascripts/loco.js"></script>
+    <script src="../javascripts/search.js"></script>
+
+    <script>
+ 
+       var swiper = new Swiper(".mySwiper", {
+      cssMode: true,
+      grabCursor:true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop:true,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "progressbar",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  
+    </script>
+</body>
+</html>

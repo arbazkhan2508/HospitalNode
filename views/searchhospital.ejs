@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Hospitals</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/searchhospital.css">
+    <link rel="stylesheet" href="../stylesheets/loco.css">
+    <link rel="stylesheet" href="../stylesheets/nav.css">
+    <link rel="stylesheet" href="../stylesheets/search.css">
+    <link rel="stylesheet" href="../stylesheets/footer.css">
+</head>
+<body>
+    <style>
+         #ah{
+         transform: translateY(0%) !important;
+        }
+    </style>
+     <% include ./partials/search.ejs %>
+     <% include ./partials/nav.ejs %>
+    <div id="main">
+        <div id="h_fix">
+
+        </div>
+        <div id="main_h">
+              <div class="mdiv">
+                  <div class="white">
+                      <h1>Investment.
+                        </h1>
+                           <h1> Development.</h1>
+                            <h1>Management.</h1>
+                            <a href="#">
+                                <i class="ri-arrow-right-line"></i>
+                                <span>Our Hospitals</span>
+                            </a>
+                  </div>
+                  <div class="btm">
+                     <div class="l"></div>
+                     <div class="r"></div>
+                  </div>
+              </div>
+              <div class="mdiv">
+                <div class="white"></div>
+                <div class="btm">
+                    <div class="l"></div>
+                    <div class="r"></div>
+                 </div>
+              </div>
+
+              <div class="mdiv">
+                <div class="white"></div>
+                <div class="btm">
+                 </div>
+              </div>
+
+        </div>
+        <div class="head">
+            <h1> Hospitals</h1>
+          </div>
+        <div id="h_container">
+            
+              <div id="all_hospitals">
+                <% hospitals.forEach(function(hospital){ %>
+                    <div id="lhospital">
+                        <div class="h_img">
+                            <div class="h_overlay">
+                                 <div class="special">
+                                      <small><%= hospital.Specialities %></small>
+                                 </div>
+                            </div>
+                            <img src="../images/uploads/hospitalimages/<%= hospital.pic[0] %>" alt="">
+                        </div>
+                        <div class="h_text">
+                            <div class="t">
+                              <h3><%= hospital.HospitalName %></h3>
+                              <h4><%= hospital.Address %></h4>
+                              <div class="opts">
+                                  <div class="opt">
+                                      <h6>Timing:</h6>
+                                      <h6><%= hospital.Timing %></h6>
+                                  </div>
+                                  <div class="opt">
+                                      <h6>Beds:</h6>
+                                      <h6><%= hospital.Beds %></h6>
+                                  </div>
+                                  <div class="opt">
+                                    <h6>ICU:</h6>
+                                    <h6><%= hospital.ICU %></h6>
+                                  </div>
+                                  <div class="opt">
+                                      <h6>Timing:</h6>
+                                      <h6>24*7</h6>
+                                  </div>
+                                  
+                              </div>
+                              <!-- <a style="font-family:roobert;margin-top: 20px;" href="<%= hospital.Hurl %>"><%= hospital.Hurl %></a> -->
+                            </div>
+                             <div class="btm">
+                              <div class="btn">
+                                    <a href="/singleH/<%= hospital._id %>"><h5>CHOOSE YOUR HOSPITAL <span><i class="ri-arrow-right-line"></i></span></h5></a>
+                              </div>
+                             </div>
+                      </div>
+                      </div>
+                <% }) %>
+                 
+              </div>
+        </div>
+        
+        <% include ./partials/footer.ejs %>
+    </div>
+    <% include ./partials/loco.ejs %>
+    <script src="../javascripts/loco.JS"></script>
+    <script src="../javascripts/search.JS"></script>
+</body>
+</html>

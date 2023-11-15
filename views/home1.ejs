@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/home1.css">
+    <link rel="stylesheet" href="../stylesheets/nav.css">
+    <link rel="stylesheet" href="../stylesheets/loco.css">
+    <link rel="stylesheet" href="../stylesheets/footer.css">
+    <link rel="stylesheet" href="../stylesheets/search.css">
+</head>
+ <style>
+    #home{
+        transform: translateY(0%) !important;
+    }
+    #main_nav .left_nav h6{
+            margin-bottom: -1px; 
+    }
+    #main_nav .search{
+        padding-top: 0vmax;
+        padding-bottom: .5vmax;
+    }
+    .search>h6 {
+        margin-top: 10px;
+    }
+ </style>
+<body>
+    <% include ./partials/nav.ejs %>
+    <% include ./partials/search.ejs %>
+    <div id="main">
+        <div id="home_page">
+            <div class="div">
+                <div class="head_text">
+                    <h6>We have a flossify on how to find</h6>
+                    <div class="h1s">
+                        <h1>Top Class <span>Health</span></h1>
+                        <h1><span>Care</span> Hospital.</h1>
+                    </div>
+                    <div class="tp">
+                        <i class="ri-check-line"></i>
+                        <h6>Top Hospitals</h6>
+                    </div>
+                    <div class="tp">
+                        <i class="ri-check-line"></i>
+                        <h6>Top Services</h6>
+                    </div>
+                    <div  onclick="window.location.href='/allhospitals'"  class="btn">
+                        Explore our hospitals
+                    </div>
+                    <div class="p">
+                        <img src="https://sheryians.com/Assets/images/Icon%20awesome-feather-alt.png" alt="">
+                        <p>We all take care of your all needs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="img">
+                <!-- <img src="./doctors-removebg-preview.png" alt=""> -->
+                <img src="../images/doctors.jpg" alt="">
+            </div>
+        </div>
+        <div class="nav_trigger" id="our_services">
+            <h1>Our Services</h1>
+            <div id="services">
+                <div id="service">
+                    <div class="simg">
+                        <i class="ri-earth-fill"></i>
+                    </div>
+                    <h4>Nationwide Coverage</h4>
+                    <p>"Efficient hospital management solutions with nationwide coverage for streamlined operations, better patient care, and optimal resource utilization. Join us today!"</p>
+                    
+                </div>
+                <div id="service">
+                    <div class="simg">
+                        <i class="ri-hospital-fill"></i>
+                    </div>
+                    <h4>Hospital Registration</h4>
+                    <p>"Seamless hospital registration process for patients and healthcare providers. Simplify access to care with our user-friendly platform. Register now!"</p>
+                   
+                </div>
+                <div id="service">
+                    <div class="simg">
+                        <i class="ri-database-2-fill"></i>
+                    </div>
+                    <h4>Comprehensive Database</h4>
+                    <p>"Powerful, comprehensive database for hospitals. Organize, access, and analyze critical data efficiently. Elevate your healthcare services with us!"</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="hospitals">
+            <div class="top">
+                <h1>TOP &nbsp;HOSPITALS </h1>
+            </div>
+            
+            <div class="hcards">
+                <% var count = 0 %>
+                <% allhospitals.forEach(function(hospital){ %>
+                    <div onclick="window.location.href='/singleH/<%= hospital._id %>'" class="hcard">
+                         <% count++ %>
+                        <h1>0<%= count %></h1>
+                        <div class="img">
+                            <div class="ioverlay">
+                                <div class="vm">
+                                    VIEW
+                                </div>
+                            </div>
+                            <img src="../images/uploads/hospitalpr/<%= hospital.Himg %>"
+                                alt="">
+                        </div>
+                        <div class="name_div">
+                            <h3><%= hospital.HospitalName %></h3>
+                            <h6><%= hospital.State %></h6>
+                        </div>
+                    </div>
+                <% }) %>
+                
+            </div>
+        </div>
+        <div class="hbtm">
+            <div onclick="window.location.href='/allhospitals'" class="botton">
+                View All
+            </div>
+        </div> 
+        <div id="steps">
+            <div class="head">
+                <p>Four Steps to a Fast & Easy Reach</p>
+                <div class="h4s">
+                    <h4>A <span>Simple Solution </span> for </h4>
+                    <h4>Reaching Your Hospital.</h4>
+                </div>
+            </div>
+            <div class="soptions">
+                <div class="option">
+                    <h2>1</h2>
+                    <div class="bcontainer">
+                        <h5>Visit the Website</h5>
+                        <p>"Explore our website for cutting-edge hospital management solutions. Elevate patient care and optimize operations. Join the healthcare revolution now!"</p>
+                       
+                    </div>
+                </div>
+                <div class="option">
+                    <h2>2</h2>
+                    <div class="bcontainer">
+                        <h5>Create an Account</h5>
+                        <p>
+                            "Get started with us today! Create an account for easy access to our innovative hospital management tools and features."</p>
+          
+                    </div>
+                </div>
+
+                <div class="option">
+                    <h2>3</h2>
+                    <div class="bcontainer">
+                        <h5>Fill Hospital Information</h5>
+                        <p>
+                            "Provide essential hospital details: services, facilities, specialties. Ensure patients make informed decisions. Elevate healthcare standards through accurate information."</p>
+                     
+                    </div>
+                </div>
+                <div class="option">
+                    <h2>4</h2>
+                    <div class="bcontainer">
+                        <h5>GSTIN Verification</h5>
+                        <p>Verify GSTIN (Goods and Services Tax Identification Number) by cross-checking its 15-digit alphanumeric code on official GST portal.</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div onclick="window.location.href='/addhospital'" class="sbtn" >
+                    ADD YOUR HOSPITAL <span>→</span>
+                </div>
+            </div>
+        </div>
+        <div id="reviews">
+            <div class="review_top">
+                <h1>Testimonials</h1>
+
+            </div>
+            <!-- <button onclick="hitPostRoute()">Hit POST Route</button> -->
+
+            <div class="rewview_btm">
+
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <% allreviews.forEach(function(review){ %>
+                            <div class="swiper-slide" style="width: 463px; margin-right: 40px;padding-bottom: 13vh;" role="group"
+                            aria-label="4 / 7" data-swiper-slide-index="3">
+                            <p>
+                                <%= review.review %>
+                            </p>
+                            <div id="page2-dp">
+                                <div id="selected-testimonial" class="page2-dp-img">
+                                    <img style="width: 100%;height: 100%;object-fit: cover;" loading="lazy"
+                                        src="../images/uploads/userimages/<%= review.ownerId.userProfileimg %>"
+                                        alt="">
+                                </div>
+                                <p id="testimonial_name">
+                                    <span style="max-lines: 2vmax;">
+                                        <%= review.ownerId.name %>
+                                    </span>
+                                </p>
+                            </div>
+                            </div>
+                        <% }) %>
+                       
+             
+                    </div>
+
+                    <div style="right: 3%; margin-left:83vw;" class="swiper-button-next" id="sliderleft2">
+                        <i class="ri-arrow-drop-right-line"></i>
+                    </div>
+                    <div class="swiper-button-prev" id="slideright2">
+                        <i class="ri-arrow-drop-left-line"></i>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div id="review_form">
+            <div class="left">
+                <img src="https://img.freepik.com/free-vector/review-concept-illustration-idea-feedback-business-people_613284-1724.jpg?size=626&ext=jpg&uid=R107214502&ga=GA1.2.683316832.1687191915&semt=ais"
+                    alt="">
+            </div>
+            <div class="form">
+                <div class="fm">
+                    <form id="reviewform" action="/review" method="post">
+                        <h1>ADD REVIEW</h1>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Your Full Name</label>
+                            <input name="name" type="text" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                        </div>
+                             <textarea name="message" placeholder="Message" rows="5"></textarea>
+                        
+                        <button type="submit" class="btn btn-primary">Give Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="overlay"></div>
+    </div>
+   <% include ./partials/footer.ejs %>
+   <% include ./partials/loco.ejs %>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../javascripts/loco.JS"></script>
+    <script src="../javascripts/search.JS"></script>
+    <script src="../javascripts/nav.JS"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+
+        function updateSlidesPerView() {
+            if (window.matchMedia('(max-width: 767px)').matches) {
+                swiper.params.slidesPerView = 1; // Change to 1 on mobile
+            } else {
+                swiper.params.slidesPerView = 2; // Change to 4 on desktop
+            }
+            swiper.update(); // Update Swiper instance
+        }
+
+        updateSlidesPerView();
+        window.addEventListener('resize', updateSlidesPerView);
+
+        function hitPostRoute() {
+            fetch('/confirm/booking', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ key: 'value' }) // Replace with your desired payload
+            })
+                // .then(response => response.text())
+                .catch(error => console.log(error));
+        }
+
+
+
+    </script>
+</body>
+
+</html>

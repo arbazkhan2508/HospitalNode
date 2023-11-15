@@ -1,0 +1,1047 @@
+
+@font-face {
+    font-family: "fontak";
+    src: url("/fonts/633c69fa2fd674fdb151c50e_cardinalfruitweb-italic.ttf");
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+
+#main{
+    background-color: #fceaeb;
+    width: 100%;
+}
+#home_page{
+    display: flex;
+    width: 100%;
+    background-color: #f2f2f2;
+    /* background-color: #dfdace; */
+    background-color: #dbeffa;
+    background-color: #d7eaf5;
+    /* background-color: #dbeffa; */
+    background-color: #2b6f70;
+    background-size: contain;
+    background-position: center;
+
+
+}
+#home_page .div{
+    width: 50%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    /* background-color: #111; */
+    display: flex;
+    padding-top: 10vh;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 2vmax;
+    
+
+}
+#home_page .img{
+    width: 50%;
+    height: 100vh;
+    background-color: #2b6f70;
+    /* background-color: #111; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#home_page .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+#home_page .div h6{
+    color: #6b7a83;
+    font-family: voyage;
+    font-size: 1.5vmax;
+    letter-spacing: 1px;
+}
+#home_page .div h1{
+    color: #111;
+    font-family: Roobert;
+    font-size: 4.5vmax;
+    margin-bottom: .5vmax;
+}
+#home_page .div h1 span{
+    color: #dbeffa;
+    color: #6b7a83;
+    color: #2b6f70;
+    font-family: Roobert;
+    font-size: 4.5vmax;
+}
+#home_page .tp{
+    display: flex;
+    align-items: center;
+    gap: 1.3vmax;
+ }
+ #home_page .tp i{
+    font-size: 1.3vmax;
+    font-weight: 600;
+    color: #ffff;
+    background-color: #2b6f70;
+    padding: .4vmax;
+    border-radius: 50%;
+ }
+ #home_page .head_text{
+    padding-left: 1vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vmax;
+ }
+ #home_page .head_text .h1s{
+    margin-bottom: .4vmax;
+ }
+ #home_page .btn{
+    margin-top: 2vmax;
+    margin-bottom: 2vmax;
+ }
+ #home_page .p{
+    display: flex;
+    align-items: center;
+    gap: 1vmax;
+ }
+ #home_page .p img{
+    height:6vh;
+    background-color: #2b6f70;
+    border-radius: 50%;
+    padding: .8vmax;
+ }
+ #home_page .btn:hover{
+    background-color: #2b6f70d4;
+ }
+ #home_page p{
+    font-size: 1vmax;
+    font-family: gilroy;
+    font-weight: 600;
+ }
+ #home_page .tp h6{
+    font-size: 1.3vmax;
+    font-family: roobert;
+    color: #111;
+ }
+ #home_page .btn {
+    font-size: 1vmax;
+    font-weight: 550;
+    font-family: roobert;
+    color: #fff;
+    background-color: #2b6f70;
+    width: fit-content;
+    padding: 1.5vmax 2vmax;
+    border-radius: .3vmax;
+ }
+
+
+
+/* home_page responsive */
+
+@media (max-width:600px){
+    #home_page{
+        flex-direction: column;
+    }
+    #home_page .div{
+        width: 100%;
+        height: 70vh;
+    }
+    #home_page .img{
+        width: 100%;
+    }
+    #home_page .div h6{
+        font-size: 2vmax;
+    }
+    #home_page .div h1 {
+        font-size: 5.5vmax;
+        white-space: nowrap;
+    }
+    #home_page .div h1 span{
+        font-size: 5.5vmax;
+        white-space: nowrap;
+    }
+    #home_page .div .h1s {
+       margin-top: 1.1vmax;
+       margin-bottom: 2vmax;
+    }
+    #home_page .div .tp {
+        margin-bottom: 2vmax;
+     }
+     #home_page .div .btn {
+        font-size: 2vmax;
+        padding:2vmax;
+     }
+     #home_page p{
+        font-size: 2vmax;
+     }
+     #home_page .div{
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 14vh;
+     }
+     #home_page .img{
+        height: 50vh;
+     }
+     #home_page .img img{
+        /* object-fit: scale-down; */
+     }
+}
+/* home_page responsive */
+
+
+
+/* services */
+
+
+
+#our_services{
+    padding: 5vh 0;
+    background-color: #f5f2e7;
+    padding-bottom: 5vmax;
+
+   }
+   #our_services h1{
+    font-family: "fontak";
+    font-size: 10vmax;
+    font-weight: 500;
+     color: #272323;
+     text-align: center;
+     margin-bottom: 7vmax;
+   }
+   #our_services #services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 5vmax;
+   }
+
+  #services #service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vmax;
+    width: 22vw;
+    border-radius: 1vmax;
+    padding: 1.5vmax 2vmax;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+    background-color: #f5f2e7;
+    box-shadow: 0 0 3px #b4b2ab;
+  }
+  
+  #services #service:hover{
+    transform: translateY(-10%);
+  }
+  #services #service p{
+    font-size: 1.1vmax;
+    line-height: 1.5;
+    text-align: center;
+    color: #666;
+  }
+#services #service .simg{
+    width: 7vh;
+    height: 7vh;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color:#2b6f70;
+}
+#services #service .simg img{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+@media (max-width:767px) {
+     #services{
+        flex-direction: column;
+        gap: 3vmax;
+     }
+     #services #service{
+        width: 90vw;
+     }
+     #services #service p{
+        font-size: 2.2vmax;
+        margin-top: 1vmax;
+     }
+     #services #service .simg{
+        margin-bottom: 1vmax;
+     }
+    
+     #sliderleft2{
+        left: -15px;
+     }
+     #page2-dp {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 50vw !important;
+     }
+     #page2-dp p{
+        white-space: nowrap;
+     }
+     .swiper-pagination{
+        margin-bottom: 15vmax;
+     }
+}
+
+
+/* services */
+
+/* hospitals */
+
+
+#hospitals{
+    width: 100%;
+    background-color: #f5f2e7;
+    padding-bottom: 100vh;
+    
+}
+#hospitals .top{
+    padding-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#hospitals .top h1{
+    font-family: "fontak";
+    font-size: 10vmax;
+    font-weight: 500;
+     color: #272323;
+}
+ .botton{
+    border: 1px solid #111;
+    font-size: 1vmax;
+    font-family: roobert;
+    letter-spacing: 1px;
+    padding:1.5vmax 5vmax;
+    border-radius: 60%;
+    margin-top: 2vmax;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+}
+ .botton:hover{
+    background-color: #2b6f70;
+    color: #fff;
+    font-weight: 900;
+    border: none;
+}
+#hospitals .hcards{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5vmax;
+    align-items: center;padding-top:5vmax;
+    /* gap: 5vmax; */
+    justify-content: space-between;
+}
+.hcard{
+    width: 35vw;
+    height: 90vh;
+    border-radius: 10px;
+    flex-shrink: 0;
+    position: relative;
+}
+.hcard:nth-child(1){
+    width: 40vw;
+    height: 100vh !important;
+}
+.hcard:nth-child(1) .img{
+    height: 90vh;
+}
+.hcard:nth-child(4){
+    width: 40vw;
+    height: 60vh !important;
+}
+.hcard:nth-child(4) .img{
+    height: 50vh;
+}
+
+.hcard:nth-child(2){
+    transform: translateY(70%);
+}
+.hcard:nth-child(4){
+    transform: translateY(150%);
+}
+.hcard:nth-child(3){
+        transform: translateY(40%);
+    
+}
+.hcard .img{
+    position: relative;
+    margin: .8vmax 0;
+    width: 100%;
+    overflow: hidden;
+    height: 80vh;
+    overflow: hidden;
+    /* background-image: url("https://www.healthcareitnews.com/sites/hitn/files/Screen%20Shot%202022-10-27%20at%201.55.04%20PM_2.jpg"); */
+    /* background-image: url("https://content.jdmagicbox.com/comp/bangalore/r5/080pxx80.xx80.170124213726.s6r5/catalogue/dr-b-s-chakrapani-manipal-hospital--old-airport-road-bangalore-cardiologists-sx210.jpg"); */
+    background-size: cover;
+    border-radius: .8vmax;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+}
+.hcard .img .ioverlay{
+    position: absolute;
+    opacity: 0;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background-color: #b97d4476;
+}
+.hcard .img .ioverlay .vm{  
+    width: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: roobert;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1.2vmax;
+    height: 20vh;
+    border-radius: 50%;
+    background-color: #2b6f70;
+}
+.hcard:hover .img{
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.hcard:hover .ioverlay{
+    opacity: 1;
+}
+.hcard .img:hover img{
+    width: 105%;
+    height: 105%;
+}
+.hcard .img img{
+     width: 100%;
+     height: 100%;
+     transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+     object-fit: cover;
+     /* object-position: center; */
+}
+.hcard .name_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 .5vmax;
+}
+.hcard .name_div h3{
+    font-family: "fontak";
+    font-size: 2.5vmax;
+}
+.hcard h1{
+    width: fit-content;
+    border-radius: 50%;
+    padding: 1vmax 1.5vmax;
+    font-family: "fontak";
+    margin-bottom: 1vmax;
+    border: 1px solid #111;
+}
+.hcard .name_div h6{
+    font-family: "roobert";
+    font-size: 1vmax;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.hbtm{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 5vh;
+    justify-content: center;
+    background-color: #f5f2e7;
+}
+
+
+
+
+  .swp{
+    width: 100%;
+    height: 70vh;
+  }
+  .swiper-button-next, .swiper-rtl .swiper-button-prev{
+    position: absolute;
+    top: 0;
+    z-index: 999999;
+  }
+
+@media (max-width:767px){
+     #hospitals .top h1{
+        text-align: center;
+        line-height: 1;
+        padding-bottom: 10vh;
+     }
+     .hcard {
+        width: 90vw !important;
+        height: 60vh !important;
+     }
+     .hbtm{
+        align-items: center;
+     }
+     .botton{
+        font-size: 2.4vmax;
+        padding: 3vmax 8vmax;
+     }
+     .hcard .img{
+        width: 90vw !important;
+        height: 50vh !important;
+     }
+     .hcard .name_div h3{
+        font-size: 3.5vmax;
+     }
+     .hcard .name_div h6{
+        font-size: 2vmax;
+     }
+    
+     #hospitals{
+        /* padding:/ initial; */
+        /* flex-direction: column !important; */
+        padding-bottom: initial;
+     }
+     #hospitals .hcards {
+        flex-direction: column;
+        align-items: center;
+        padding: initial;
+        gap:7vmax;
+     }
+     .hcard:nth-child(1) {
+        width: 40vw;
+        height: 60vh !important;
+    } 
+    .hcard:nth-child(1) .img {
+        height: 50vh;
+    }
+    .hcard:nth-child(2) {
+        transform: translateY(0%) !important;
+    }
+    .hcard{
+        width: 90vw !important;
+        height: 60vh;
+    }
+    .hcard .img{
+        height: 50vh;
+    }
+    .hcard:nth-child(3) {
+        transform: translateY(0%);
+    }
+    .hcard:nth-child(4) {
+        transform: translateY(0%);
+    }
+}
+
+
+/* hospitals */
+
+/* steps */
+
+
+#steps{
+    padding-top: 15vh;
+    width: 100%;
+    /* height: 115vh; */
+    background-color: #f2f2f2;
+    background-image: url("https://uploads-ssl.webflow.com/647fbefe1a60c024d45a9a37/647fbefe1a60c024d45a9abd_bg__paper.jpg");
+    background-size: cover;
+    padding-bottom: 10vh;
+}
+
+#steps p{
+    font-family: voyage;
+    font-size: 1.3vmax;
+    text-align: center;
+    font-weight: 900;
+}
+
+#steps h4{
+    font-family: roobert;
+    font-size: 3vmax;
+    text-align: center;
+    font-weight: 900;
+}
+#steps h4 span{
+    font-family: roobert;
+    font-size: 3vmax;
+    text-align: center;
+    color: #2b6f70;
+    font-weight: 900;
+}
+#steps .option{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2vmax;
+    width:22.5vw;
+    height: 40vh;
+    background-color: #fff;
+    border-radius: 1vmax;
+    padding:1.5vmax 2vmax;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+}
+#steps .option:hover{
+    transform: translateY(-10%);
+}
+#steps .option p{
+    text-align: left;
+    font-family: roobert;
+    line-height: 1.3;
+    color: #555;
+    font-weight: 599;
+}
+
+#steps h2{
+    text-align: left;
+    background-color: #2b6f70;
+    color: #fff;
+    font-family: roobert;
+    font-size: 2vmax;
+    padding:.5vmax 1.6vmax;
+    border-radius: .3vmax;
+}
+
+#steps h5{
+    text-align: left;
+    font-family: roobert;
+    font-size: 1.3vmax;
+}
+
+#steps .bcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1vmax;
+}
+#steps .soptions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2vmax;
+    padding: 5vmax 2vmax;
+    padding-top: 7vmax;
+}
+
+#steps .button{
+    padding-top: 5vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+}
+#steps .sbtn{
+    background-color: #2b6f70;
+    width: fit-content;
+    padding: 1vmax 1.5vmax;
+    border-radius: .2vmax;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.3vmax;
+    font-family: Roobert;
+    letter-spacing: 1px;
+}
+#steps .sbtn span{
+    display: inline-block;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)1s
+}
+
+#steps .sbtn:hover span{
+    transform: translateX(100%);
+
+}
+#steps .sbtn:hover {
+    background-color: #2b6f70d4;
+
+}
+
+
+/* responsive steps */
+
+@media (max-width:767px){
+
+     #steps .soptions{
+        flex-direction:column;
+        gap:3vmax;
+     }
+     #steps .soptions .option{
+        width: 80vw;
+        height: 23vh;
+        flex-direction: column;
+     }
+     #steps{
+        padding-top: 10vh;
+     }
+     #steps p{
+        font-size: 2vmax;
+     }
+     #steps h4{
+        font-size: 3.5vmax;
+     }
+     #steps h2{
+        font-size: 3vmax;
+        padding-left: 2vmax;
+        padding-right: 2vmax;
+     }
+     #steps h5{
+        font-size: 2vmax;
+     }
+     #steps .option p{
+        font-size: 2vmax;
+     }
+     #steps .sbtn {
+        padding: 2vmax 3vmax;
+        font-size: 2vmax;
+        border-radius: .7vmax;
+     }
+}
+
+/* responsive steps */
+
+
+/* #reviews  */
+
+
+#reviews{
+    padding: 0 5vw;
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    background-color: #f5f2e7;
+
+    /* background-color: #fff; */
+  }
+  .review_top{
+    width: 100%;
+    padding-top: 2vh;
+    height: 20vh;
+    display: flex;
+    padding-top: 45vh;
+    /* margin-top: 20vh; */
+    /* padding-left: 3vmax; */
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .swiper i{
+    color: #111 !important;
+  }
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    background-color: #111;
+  }
+  .swiper-pagination{
+    margin-bottom: 6vmax;
+  }
+  .review_top h1{
+    /* font-family: gilroy;
+    font-size: 3vw;
+    margin-bottom: 5vmax;
+    padding-left: 5vmax;
+    font-weight: 500; */
+    font-family: "fontak";
+    font-size: 10vmax;
+    font-weight: 500;
+     color: #272323;
+     text-align: center !important;
+     margin-bottom: 7vmax;
+  }
+  .review_top h1 span{
+    font-family: gilroy;
+    font-family: "FH Giselle";
+    font-size: 3vw;
+    color: #f47a44;
+  
+  }
+  .review_top .rvwbtn{
+    background-color: #f47a44;
+    border-radius: 5px;
+    color: #fff;
+    padding: 12px 20px;
+    font-family: gilroy;
+    font-size: 22px;
+    font-weight: 100 !important;
+    letter-spacing: 1px;
+  }
+  
+  #sliderleft2 {
+    z-index: 9999;
+    position: absolute;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    font-size: 30px;
+    left: 40px;
+  }
+  
+  #slideright2 {
+    z-index: 9999;
+    position: absolute;
+    top: 30%;
+    right: 5% !important;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    width: 40px;
+    right: 40px;
+    font-size: 30px;
+    height: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+  }
+  
+  .rewview_btm{
+    position: relative;
+    /* display: flex;
+    align-items: center; */
+    gap:2vw;
+    width: 100%;
+    height: 80vh;
+    overflow-x: auto;
+    border-radius: 10px;
+  }
+  /* .rewview_btm::-webkit-scrollbar{
+    display: none;
+  }
+   */
+  
+  .swiper {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px !important;
+    position: relative;
+  }
+  
+  .swiper .swiper-slide {
+    position: relative;
+    text-align: center;
+    padding: 0 5vmax;
+    font-size: 18px;
+    /* background: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 10px !important;
+  }
+  
+  
+  .swiper .swiper-slide p{
+    text-align: left !important;
+  }
+  
+  .swiper-button-next:after{
+    display: none !important;
+  }
+  
+  .swiper.swiper-button-next:after, .swiper-button-prev:after{
+    display: none !important;
+  }
+  .swiper.swiper-button-next:after, .swiper-button-prev:after{
+    display: none !important;
+  }
+
+  
+#page2 {
+    position: relative;
+    flex-direction: column;
+    padding-top: 15vh;
+    padding-left: 0vw;
+    font-family: gilroy;
+  }
+  
+  #page2 h1 {
+    padding-left: 8vw;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  
+  #page2 p {
+    padding-top: 10vh;
+    width: 35vw;
+    line-height: 4.5vh;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  #page2 p:nth-child(3) {
+    padding-top: 3vh;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  
+  #page2-dp #testimonial_name span {
+    font-weight: 600;
+  }
+  
+  #page2-dp {
+    width: 30vw !important;
+    /* display: flex; */
+    align-items: center !important;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 5vw
+  }
+  
+  .page2-dp-img img {
+    border-radius: 50%;
+    height: 100%;
+    object-position: top;
+    transform: scale(1.5);
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .page2-dp-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 2vw;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  #selected-testimonial {
+    width: 80px;
+    height: 80px;
+  
+    border: 4px solid #9ad193;
+  }
+  
+  
+  
+  /* reviews */
+
+  /* /revewfrm */
+   
+  
+ #review_form{
+    display: flex;
+    width: 100%;
+    padding-top: 15vh;
+    background-color: #f5f2e7;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+ #review_form .left{
+    width: 50%;
+    height: 80vh;
+    padding-left: 2vmax;
+    /* background-color: teal; */
+}
+#review_form .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* object-position: center; */
+}
+ #review_form .form{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+ #review_form .form .fm{ 
+    width: 70%;
+    height: 60vh;
+    background-color: #fff;
+    background-color: #f5f2e7;
+    border-radius: 1vmax;
+    box-shadow: 0 0 3px #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vmax;
+    justify-content: center
+}
+
+
+#review_form form input{
+    border: none;
+    outline: none;
+    width: 25vw;
+    border-bottom: 1px solid #111;
+    border-radius: initial;
+    background-color: transparent;
+}
+#review_form form button{
+    background-color: #2b6f70;
+    color: #fff;
+    padding: .8vmax 2vmax;
+    font-size: 1.2vmax;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 1vmax;
+    font-family: roobert;
+    margin-left: 6vmax;
+}
+#review_form form h1{
+    text-align: center;
+    font-family: "FH Giselle";
+    font-family: roobert;
+    letter-spacing: 1px;
+    margin-bottom: 2vmax;
+}
+
+/* review responsive */
+
+@media (max-width:767px) {
+    #review_form{
+        flex-direction: column;
+        align-items: center;
+    }
+    #review_form .left{
+        width: 90%;
+        height: 50vh;
+        padding-left: initial;
+        padding: initial;
+    }
+    
+    #review_form .form{
+        width: 100%;
+        height: 60vh;
+    }#review_form .form .fm{
+        width: 90%;
+        height: 50vh;
+    }
+    #review_form .form .fm form{
+        width: 80%;
+    }
+    #review_form form input{
+        width: 70vw;
+    }
+    #review_form form h1{
+        margin-bottom: 4vmax;
+    }
+    #review_form form button{
+        margin-left: 4vmax;
+        font-size: 2.5vmax;
+        margin-top: 4vmax;
+        padding: 1vmax 3vmax;
+    }
+}
+
+/* review responsive */
+
+#overlay{
+    width: 100%;
+    height: 45vh;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheets/Myprofile.css">
+    <link rel="stylesheet" href="../stylesheets/nav.css">
+    <link rel="stylesheet" href="../stylesheets/navloader.css">
+</head>
+<style>
+    #mf{
+      display: none;
+    }
+    #MENU{
+      color: #000 !important;
+    }
+  #nav {
+    background-color: transparent !important;
+    border: none !important;
+    padding-bottom: 5vh;
+  }
+  #nav .menu_circle{
+    border: none !important;
+  }
+
+  #nav h6 {
+    font-weight: 500 !important;
+    color: #000 !important;
+    transform: translateY(-270%);
+  }
+  #nav .menu_icon img {
+    scale: .5;
+  }
+
+
+  
+   
+</style>
+<body>
+
+ <form id="mf" action="/uploadphotu" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Multiple
+            files input example</label>
+        <input id="pfile" name="filenames" class="form-control" type="file" id="formFileMultiple" multiple>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Submit">
+
+    </form>
+    <% include ./partials/nav.ejs %>
+        <div id="main">
+         
+            
+          <div id="center">
+               <div id="left-panel">
+                    <div id="user">
+                        <div id="user-image" style="background-color: none; position: relative;">
+                           <%  if(user.userProfileimg){ %>
+                            <img src="../images/uploads/userimages/<%= user.userProfileimg %>" alt="">
+                          <% } else{ %>
+                            <%= user.name.charAt(0) %>
+                          <% }%>
+                            
+                                    <div id="user-profile-edit-btn">
+                                        <button><i class="ri-pencil-fill"></i></button>
+                                    </div>
+                        </div>
+                        <div id="user-dets">
+                            <h2 id="user-name">
+                                
+                                  <%= user.name %>
+                                                
+                            </h2>
+                        </div>
+                    </div>
+                    <div id="user-options">
+                        <h3 id="op1">
+                            <div class="leftline" id="leftline1"></div><i class="ri-user-6-line"></i>My Profile
+                        </h3>
+                        <h3 onclick="window.location.href='/myhospital'" id="op2">
+                            <div class="leftline" id="leftline2"></div><i class="ri-hospital-line"></i>My Hospitals
+                        </h3>
+                        <h3 onclick="window.location.href='/mybooking'"  id="op3">
+                            <div class="leftline" id="leftline3"><a href="/myreviews"></a></div><a href="/myreviews"><i class="ri-bookmark-line"></i></i>My Reviews</a>
+                        </h3>
+                        <h3 onclick="window.location.href='/mybooking'"  id="op3">
+                          <div class="leftline" id="leftline3"><a href="/myrented"></a></div><a href="/addhospital"><i class="ri-hospital-line"></i>Add Hospital</a>
+                      </h3>
+                        <h3 id="op4">
+                            <div class="leftline" id="leftline4"></div><a href="/logout"><i class="ri-logout-box-line"></i>Log out</a>
+                        </h3>
+                    </div>
+               </div>
+               <div id="right-panel">
+                    <div id="faram1">
+                        <h1>Welcome, <span style="text-transform: capitalize;">
+                                <%= user.name %></span>.</h1>
+                    <h3>Account Details</h3>
+                    <form id="updtfrm" action="/update" method="post">
+                        <div class="name">
+                            <div id="firstName">
+                                 <input value="<%= user.name %>" name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div id="lastName">
+                                <input value="<%= user.lastname %>" name="lastName" placeholder="lastName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="email">
+                            <div id="email">
+                                <input value="<%= user.email %>" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="frmbtm">
+                            <div id="phone">
+                                   <input value="<%= user.contactnumber %>" placeholder="Contect No.(WhatsApp+)" name="contactnumber" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div id="phone">
+                                <input style="justify-content: space-between !important;" value="<%= user.dob %>" name="DOB"  type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Date Of Birth">
+
+                            </div>                
+                        </div>
+                        
+                        <div id="btns">
+                            
+                            <button type="submit" class="btn btn-primary" id="savebtn">Update</button>
+                            <!-- <button type="submit" form="faram" id="savebtn">Save</button> -->
+                            <button id="cancelbtn" >Cancel</button>
+                        </div>
+                   </form>
+                    </div>
+               </div>
+          </div>
+        
+        </div>
+</body>
+   <% include ./partials/loco.ejs  %>
+    <!-- <script src="../javascripts/nav.js"></script> -->
+    <script src="../javascripts/nav.js"></script>
+  <script>
+ 
+  document.querySelector("#user-profile-edit-btn button")
+        .addEventListener("click",function(){
+          document.querySelector("#pfile").click();
+
+        })
+        document.querySelector("#pfile").addEventListener("change",function(){
+           document.querySelector("#mf").submit();
+        })
+
+        const button = document.getElementById('cancelbtn');
+        button.addEventListener('click', () => {
+            window.location.href = '/'; // Change the route here
+        });
+
+
+        const newImageSrc = '/images/uploads/Shery Ride-logos/Shery Ride-logos_black.png';
+          document.getElementById('logoimg').src = newImageSrc;
+</script>
+</html>

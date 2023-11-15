@@ -1,0 +1,133 @@
+#overlay{
+    width: 100%;
+    height: 45vh;
+}
+#footer{
+position: fixed;
+bottom: 0;
+z-index: -1;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 50vh;
+cursor: pointer;
+background-color: #0c0c0c;
+border-top: 1px solid #fff;
+display: flex;
+}
+#footer i{
+color: #fff;
+font-size: 1.5vmax;
+margin-right: 1.2vmax;
+font-weight: 500;
+}
+#footer h4{
+color: #fff;
+font-size: 2.2vmax;
+margin-right: 1.2vmax;
+font-family: roobert;
+font-weight: 500;
+letter-spacing: 1px;
+}
+#footer .fl{
+padding-top: 10vh;
+width: 30%;
+height: 100%;
+}
+#footer a{
+color: #fff;
+font-size: 1.2vmax;
+letter-spacing: 1px;
+font-family: "roobert";
+/* margin-bottom: .3vmax; */
+}
+#footer .a1{
+display: flex;
+flex-direction: column;
+gap: 2vmax;
+align-items: flex-start;
+}
+#footer .fl{
+display: flex;
+align-items: flex-start;
+gap: 3vmax;
+}
+#footer .fl:nth-child(3){
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+justify-content: flex-start;
+
+}
+#footer .fl:nth-child(1){
+display: flex;
+flex-direction: column;
+}
+
+a{
+text-decoration: none;
+}
+#footer .fbt{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 5vmax;
+border: 1px solid #fff;
+color: #fff;
+padding: .7vmax 1.5vmax;
+letter-spacing: 1px;
+border-radius: 3vmax;
+}
+
+#footer span {
+display: inline-block;
+transition: all cubic-bezier(0.19, 1, 0.22, 1)1s;
+}
+#footer .fbt:hover span{
+transform: translateX(20%);
+font-family: roobert;
+}
+
+#footer small{
+    font-family: roobert;
+}
+@media (max-width:767px){
+#footer{
+    flex-direction: column;
+    height: 80vh;
+}
+#overlay{
+     height: 67vh;
+}
+#footer .fl{
+    width: 100%;
+    height: 20vh;
+    padding-left: 2vmax;
+}
+#footer i{
+    font-size: 3vmax;
+}
+#footer a{
+    font-size:2vmax;
+}
+#footer .fbt{
+    padding:1vmax 2vmax;
+    font-size: 2.6vmax;
+}
+
+#footer .fl:nth-child(1) h4{
+    font-size: 4vmax;
+
+}
+#footer .fl:nth-child(3) {
+    padding-right: 3vmax;
+    flex-direction: column-reverse;
+    height: 30vh;
+
+}#footer .fl:nth-child(3) h4{
+    font-size: 3vmax;
+
+}
+
+}

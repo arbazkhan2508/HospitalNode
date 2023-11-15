@@ -1,0 +1,181 @@
+<% if(user){ %>
+    <div id="main_nav">
+        <div class="left_nav">
+            <div class="logo">
+                <i class="ri-hospital-fill"></i>
+                <!-- <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSyyxgF44Fmq2xjVnHae4deYHcJ5xWVLFa6wAPFcEBAXProf9CL" alt=""> -->
+                <small>BIO TECH</small>
+            </div>
+            <div class="option">
+                <a href="/">
+                    <h6>Home</h6>
+                    <div id="home" class="line"></div>
+                </a>
+            </div>
+            <div class="arw"></div>
+            <div class="option">
+                <a href="/allhospitals">
+                    <h6>All Hospitals </h6>
+                    <div id="ah" class="line"></div>
+                </a>
+            </div>
+            <div class="arw"></div>
+            <div class="option">
+                <a href="/addhospital">
+                    <h6>Add Hospital</h6>
+                    <div id="add" class="line"></div>
+                </a>
+            </div>
+            <div class="arw"></div>
+            <div class="option">
+                <a href="#">
+                    <h6>Testimonials</h6>
+                    <div class="line"></div>
+                </a>
+            </div>
+        </div>
+        <div class="right_nav">
+            <a href="/profile"><h6 style="letter-spacing: .5px;">Heyy,<span><%= user.name %></span></h6></a>
+              <div class="search">
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+              </div>
+              <div class="menu_div">
+                <i id="search" class="ri-search-line"></i>
+                   <h6>MENU</h6>
+                   <i id="menu" class="ri-menu-3-line"></i>
+              </div>
+        </div>
+    </div>
+    <div id="side_nav">
+        <div id="icon" class="row">
+              <div class="cancel">
+                <i class="ri-close-line"></i>
+              </div>
+        </div>
+        <div onclick="window.location.href='/'" class="row">
+               <h3>Home</h3>
+       </div>
+       <div onclick="window.location.href='/allhospitals'" class="row">
+               <h3>All Hospitals</h3>
+       </div>
+       <div onclick="window.location.href='/'" class="row">
+           <h3>Testimonials</h3>
+       </div>
+       <div onclick="window.location.href='/service'" class="row">
+               <h3>Services</h3>
+       </div>
+       <div onclick="window.location.href='/addhospital'" class="row">
+               <h3>Add Hospital</h3>
+       </div>
+       <div onclick="window.location.href='/profile'" class="row">
+        <h3>Your Account</h3>
+</div>
+   </div>
+<% }else{ %>
+    <div id="main_nav">
+        <div class="left_nav">
+            <div class="logo">
+                <i class="ri-hospital-fill"></i>
+                <!-- <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSyyxgF44Fmq2xjVnHae4deYHcJ5xWVLFa6wAPFcEBAXProf9CL" alt=""> -->
+                <small>BIO TECH</small>
+            </div>
+            <div class="option">
+                <a href="/">
+                    <h6>Home</h6>
+                    <div id="home" class="line"></div>
+                </a>
+            </div>
+            <div class="arw"></div>
+            <div class="option">
+                <a href="/allhospitals">
+                    <h6>All Hospitals </h6>
+                    <div id="ah" class="line"></div>
+                </a>
+            </div>
+            <div class="arw"></div>
+            <div class="option">
+                <a href="/addhospital">
+                    <h6>Add Hospital</h6>
+                    <div class="line"></div>
+                </a>
+            </div>
+            <div class="arw"></div>
+            <div class="option">
+                <a href="#">
+                    <h6>Testimonials</h6>
+                    <div class="line"></div>
+                </a>
+            </div>
+        </div>
+        <div class="right_nav">
+           <a href="/login"><h6><span>Sign Up</span></h6></a>
+              <div class="search">
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+                   <h6>Search</h6>
+              </div>
+              <div class="menu_div">
+                <i id="search" class="ri-search-line"></i>
+                   <h6>MENU</h6>
+                   <i class="ri-menu-3-line"></i>
+              </div>
+        </div>
+    </div>
+    <div id="side_nav">
+        <div id="icon" class="row">
+              <div class="cancel">
+                <i class="ri-close-line"></i>
+              </div>
+        </div>
+        <div onclick="window.location.href='/'" class="row">
+               <h3>Home</h3>
+       </div>
+       <div onclick="window.location.href='/allhospitals'" class="row">
+               <h3>All Hospitals</h3>
+       </div>
+       <div onclick="window.location.href='/'" class="row">
+           <h3>Testimonials</h3>
+       </div>
+       <div onclick="window.location.href='/service'" class="row">
+               <h3>Services</h3>
+       </div>
+       <div onclick="window.location.href='/addhospital'" class="row">
+               <h3>Add hoapital</h3>
+       </div>
+       <div onclick="window.location.href='/login'" class="row">
+           <h3>Sign In</h3>
+   </div>
+   </div>
+<% } %>

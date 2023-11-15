@@ -1,0 +1,299 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.form_container{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #003e6c;
+    background-color: #4da2a8;
+    background-color: #222;
+    background-color: transparent;
+    /* background-image: url("https://img.freepik.com/premium-photo/hospital-sign-letters-outside_124437-2004.jpg?size=626&ext=jpg&uid=R107214502&ga=GA1.2.683316832.1687191915&semt=ais"); */
+    background-size: cover;
+    /* background-position:left; */
+}
+.img{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: teal;
+    background-color: transparent;
+    /* background-color: #fff; */
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-fit: scale-down; */
+    object-position: center;
+}
+.frm{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* background-color: #fff; */
+}
+.frm .top{
+    position: fixed;
+    top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 2vw;
+    width: 49%;
+}
+.frm .top i{
+    margin-bottom: -2vw !important;
+   font-size: 2.5vw;
+   color: #fff;
+   font-family: "FH Giselle";
+}
+.frm .btm{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90%;
+    /* background-image: linear-gradient(to right top, #1db9ff, #a2a0ff, #fb7ad4, #ff677a, #f48603); */
+
+    /* background-color: #666; */
+}
+
+form{
+    position: relative;
+    padding: 2vw 0;
+    padding-top: 10vh;
+    width: 80%;
+    max-height: 97vh;
+    border-radius: 10px;
+    color: #dfc06b;
+    color: #fff;
+    color: #111;
+    margin-top: 5vw;
+    align-items: center ;
+    justify-content: center;
+    overflow-y: auto;
+    background: white;
+}
+form::-webkit-scrollbar{
+    width: 10%;
+    color: red;
+    display: none;
+}
+form .info{ 
+    width: 90%;
+    border: 1px solid #fff;
+    border: 1px solid #111;
+    border-radius: 10px;
+    padding: 2vw;
+    /* background-color: red; */
+}
+form .information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    /* background-color: rebeccapurple; */
+}
+.form-label{
+    margin: initial;
+}
+form input{
+    width: 100% !important;
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+    border: 1px solid #111 !important;
+    /* color: #fff !important; */
+    color: #111 !important;
+    margin-top: .5vmax;
+    margin-bottom: .5vmax;
+}
+form textarea{
+    width: 100% !important;
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+    border: 1px solid #111 !important;
+    /* color: #fff; */
+    margin-top: .5vmax !important;
+    color: #111 !important;
+}
+form input:focus{
+    outline: none;
+}
+form select{
+    /* color: #fff !important; */
+    color: #111 !important;
+    width: 100% !important;
+    background-color: transparent !important;
+    border: 1px solid #fff !important;
+    border: 1px solid #111 !important;
+    margin-bottom: 20px;
+}
+form option{
+    color: #000 !important;
+    /* background-color:#999 !important; */
+    /* border: 1px solid #fff !important; */
+}
+form h6{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5vw;
+}
+form checkbox{
+/* background-color: rebeccapurple !important; */
+width: 20px;
+height: 20px;
+}
+form input::placeholder{
+    color: #dadada !important;
+    color: #111 !important;
+    letter-spacing: .6px;
+    font-size: 12px;
+    font-family: gilroy;
+}
+form textarea::placeholder{
+    color: #dadada !important;
+    color: #111 !important;
+    letter-spacing: .6px;
+    font-size: 12px;
+    font-family: gilroy;
+}
+.form-check-input{
+    width: 25px !important;
+    height: 25px !important;
+    /* background-color: rebeccapurple !important; */
+}
+.form-check-label{
+    /* color: red; */
+    font-family: gilroy;
+    font-size: 13px;
+    margin-left: 10px;
+    margin-top: 6px;
+}
+.check-options{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    /* gap: 20px; */
+}
+a{
+    text-decoration: none;
+}
+form select{
+    width: 70% !important;
+}
+#main_nav{
+    background-color: #fff;
+}
+form h1{
+    font-family: voyage;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+   font-weight: 700;
+    white-space: nowrap;
+    font-family: roobert;
+}
+/* .form-label{
+    margin-bottom: 1vmax;
+} */
+
+form button{
+    width: 90%;
+    text-align: center;
+    background-color: transparent !important;
+    /* border: 1px solid #fff !important; */
+    border: 1px solid #111 !important;
+    padding:10px 0 !important;
+    color: #111 !important;
+}
+
+textarea:focus, input:focus {
+    /* color: #ffff !important; */
+    color: #111 !important;
+    font-family: gilroy;
+    font-size: 15px ;
+}
+
+
+.form-control::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+  
+  .form-control::-moz-calendar-picker-indicator {
+    filter: invert(1);
+  }
+  
+  .form-control::-ms-calendar-picker-indicator {
+    filter: invert(1);
+  }
+  
+  .form-control::-o-calendar-picker-indicator {
+    filter: invert(1);
+  }
+  
+  .form-control::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  
+  .form-select svg {
+    color: red;
+    fill: red !important;
+  }
+  #popup_box a:hover {
+    box-shadow: 5px 5px 0px #000000ef;
+    color: white;
+  }
+
+  @media screen and (max-width:767px) {
+
+    .frm{
+        width: 100%;
+    }
+    form{
+        width: 100%;
+        padding-left: initial;
+    }
+    form h1 {
+        margin-top: 60px;
+    }
+    form .info{
+        width: 90%;
+    }form h6 {
+        font-size: 6vw;
+        margin-top: 2vmax;
+        margin-bottom: 2vmax;
+    }
+    .frm .top{
+        display: flex;
+        width: 100%;
+        padding-right: 2vmax;
+    }
+    .frm .top i{
+        font-size:10vw;
+        margin-bottom: 1vmax !important;
+    }
+  }
+
+
+  

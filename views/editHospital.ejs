@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../stylesheets/editHospital.css">
+    <link rel="stylesheet" href="../stylesheets/nav.css">
+    <!-- <link rel="stylesheet" href="../stylesheets/search.css"> -->
+</head>
+
+<body>
+    <style>
+        #nav .menu_circle {
+             border: none !important;
+        }
+        #MENU{
+            color: #000 !important;
+        }
+    </style>
+    <% include ./partials/nav.ejs %>
+            <div id="main">
+                <div id="pg1">
+                    <div class="image">
+                        <div class="i">
+                            <div class="i1">
+                                <h6>Edit images</h6>
+                                <i class="ri-edit-box-line"></i>
+                            </div>
+                        </div>
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <% Hospital.pic.forEach(function(pic){ %>
+                                    <div class="swiper-slide">
+                                        <img src="../images/uploads/hospitalimages/<%= pic %>" alt="">
+                                    </div>
+                                    <% }) %>
+
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                        <form id="imup" action="/update/images/<%= Hospital._id %>" method="post"
+                            enctype="multipart/form-data">
+                            <input id="imups" type="file" class="form-control" id="formFile" accept="image/*"
+                                name="Hospitalphoto1" multiple>
+                        </form>
+                    </div>
+                    <div class="frm">
+
+                        <div class="btm">
+                            <form action="/update/Hospital/<%= Hospital._id %>" method="post">
+
+                                <div class="information">
+                                    <h1>Edit Your Hospital Details.</h1>
+                                    <div style="padding-top: 5vh;" class="info">
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Your Hospital Name</label>
+                                            <input value="<%= Hospital.HospitalName %>" name="Hn"
+                                                placeholder="Your Hospital Name" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Your Hospital Adddress
+                                                </label>
+                                            <input value="<%= Hospital.Address %>" name="Ha"
+                                                placeholder="Your Hospital Address" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Your Hospital City</label>
+                                            <input value="<%= Hospital.City %>" name="Hc"
+                                                placeholder="Your Hospital City" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label"> Your Hospital State</label>
+                                            <input value="<%= Hospital.State %>" name="Hs"
+                                                placeholder="Your vehicle Colour" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label"> Your Hospital Pin Code</label>
+                                            <input value="<%= Hospital.PinCode %>" name="Hp"
+                                                placeholder=" Your Hospital Pin Code" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label"> Your Hospital Contect Number</label>
+                                            <input value="<%= Hospital.ContectNumber %>" name="Hcn"
+                                                placeholder="Your Hospital Contect Number" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label"> Your Hospital Speciality</label>
+                                            <input value="<%= Hospital.Specialities %>" name="Hsp"
+                                                placeholder="Your Hospital Speciality" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label"> Your Hospital Working Hours</label>
+                                            <input value="<%= Hospital.Timing %>" name="Ht"
+                                                placeholder="Your Hospital Working Hours" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Number of Beds</label>
+                                            <input value="<%= Hospital.Beds %>" name="Hbeds"
+                                                placeholder="Number of Beds" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">No of Inpatient Wards in your Hospital</label>
+                                            <input value="<%= Hospital.Wards %>" name="Hw"
+                                                placeholder="No of Wards in your Hospital" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">No of Intensive Care Units in your Hospital</label>
+                                            <input value="<%= Hospital.ICU %>" name="HI"
+                                                placeholder="No of ICU in your Hospital" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">No of Operation Theatre in your Hospital</label>
+                                            <input value="<%= Hospital.Ot %>" name="Hot"
+                                                placeholder="No of Operation Theatre in your Hospital" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">No of Outpatient Department in your Hospital</label>
+                                            <input value="<%= Hospital.OPD %>" name="Hop"
+                                                placeholder="No of OPD in your Hospital" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">No of Emergency Room in your Hospital</label>
+                                            <input value="<%= Hospital.ER %>" name="Her"
+                                                placeholder="No of Emergency Room in your Hospital" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">No of Labs Room in your Hospital</label>
+                                            <input value="<%= Hospital.LAB %>" name="Hl"
+                                                placeholder="No of Labs in your Hospital" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+                                        <div class="check-options">
+                                            <div class="mb-3 form-check">
+                                                <input <% if (Hospital.Ambulance) { %>checked<% } %> type="checkbox"
+                                                    class="form-check-input" id="exampleCheck1" name="Amb"
+                                                    value="true">
+                                                    <label class="form-check-label" for="exampleCheck1">Ambulace Service</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input <% if (Hospital.Medical) { %>checked<% } %> type="checkbox"
+                                                    class="form-check-input" id="exampleCheck1" name="HM"
+                                                    value="true">
+                                                    <label class="form-check-label"
+                                                        for="exampleCheck1"> Medical</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input <% if (Hospital.DI) { %>checked<% } %> type="checkbox"
+                                                    class="form-check-input" id="exampleCheck1" name="HDi"
+                                                    value="true">
+                                                    <label class="form-check-label"
+                                                        for="exampleCheck1"> Diagnostic Imaging</label>
+                                            </div>
+                                            <div class="mb-3 form-check">
+                                                <input <% if (Hospital.Canteen) { %>checked<% } %> type="checkbox"
+                                                    class="form-check-input" id="exampleCheck1" name="HCan"
+                                                    value="true">
+                                                    <label class="form-check-label"
+                                                        for="exampleCheck1"> Canteen</label>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Hospital Website Url</label>
+                                            <input value="<%= Hospital.Hurl %>" name="Hurl"
+                                                placeholder="Hospital Website Url" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="exampleInputEmail1" class="form-label">Hospital Rating</label>
+                                            <input value="<%= Hospital.Rating %>" name="Hrat"
+                                                placeholder="Hospital Rating" type="text" class="form-control"
+                                                id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        </div>
+
+                                    </div>
+                                   
+                                
+                                    <button type="submit" class="btn btn-primary">Update Your Vehicle Details</button>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% include ./partials/loco.ejs %>
+                <script src="../javascripts/nav.js"></script>
+                <script src="../javascripts/search.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+                    crossorigin="anonymous"></script>
+                <script>
+                    var swiper = new Swiper(".mySwiper", {
+                        loop: true,
+                        autoplay: true,
+                        grabCursor: true,
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                    });
+                    document.querySelector(".i1")
+                        .addEventListener("click", function () {
+                            document.querySelector("#imups").click();
+
+                        })
+                    document.querySelector("#imups").addEventListener("change", function () {
+                        console.log(document.querySelector("#imups").value)
+                        document.querySelector("#imup").submit();
+                    })
+                    
+                </script>
+                 <script>
+                    const newImageSrc = '/images/uploads/Shery Ride-logos/Shery Ride-logos_black.png';
+                       document.getElementById('logoimg').src = newImageSrc;
+                </script>
+</body>
+
+</html>
